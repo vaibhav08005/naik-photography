@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         >
           {/* Using a high-quality stock video of Indian wedding hands/details as a placeholder. 
                  You can replace the src below with your local video file path. */}
-          <source src="/videos/136132-764371500_small.mp4" type="video/mp4" />
+          <source src="videos/136132-764371500_small.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

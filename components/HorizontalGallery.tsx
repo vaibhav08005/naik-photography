@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: "Celebrations",
     category: "Birthday",
     year: "2024",
-    image: "public/images/birtday_celebration.jpg"
+    image: "images/birtday_celebration.jpg"
   },
   {
     id: 3,
