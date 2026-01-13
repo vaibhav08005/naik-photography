@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             opacity: opacity
           }}
         >
-          Chikya
+          Naik
         </h1>
         <p
           className="mt-8 text-sm md:text-base uppercase tracking-[0.3em] font-light max-w-lg mx-auto"
@@ -54,16 +54,17 @@ const Hero: React.FC = () => {
             opacity: opacity
           }}
         >
-          Authentic Event Photography • Since 2024
+          Capturing Moments with Precision and Passion
         </p>
 
-        <div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60"
-          style={{ opacity: Math.max(0, 1 - scrollY / 200) }}
-        >
-          <div className="w-[1px] h-12 bg-white/50 animate-pulse"></div>
-          <span className="text-[10px] uppercase tracking-widest">Scroll</span>
-        </div>
+      </div>
+
+      <div
+        className="absolute bottom-[20vh] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 pointer-events-none"
+        style={{ opacity: Math.max(0, 1 - scrollY / 200) }}
+      >
+        <div className="w-[1px] h-12 bg-white/50 animate-pulse"></div>
+        <span className="text-[10px] uppercase tracking-widest">Scroll</span>
       </div>
     </section>
   );

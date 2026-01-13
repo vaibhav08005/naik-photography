@@ -23,13 +23,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
   const handleNavClick = (id: string) => {
     setIsOpen(false);
     if (onNavClick) onNavClick();
-    
+
     // Small timeout to allow state updates/unmounts to process before scrolling
     setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
+      const element = document.getElementById(id);
+      if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-        }
+      }
     }, 10);
   };
 
@@ -43,25 +43,25 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
   return (
     <>
       <nav className={`fixed top-0 left-0 w-full z-[120] px-6 py-6 transition-all duration-500 flex justify-between items-center ${scrolled ? 'backdrop-blur-md bg-black/20' : ''}`}>
-        <div 
+        <div
           onClick={handleLogoClick}
           className="text-xl md:text-2xl font-serif italic font-bold tracking-tighter hover-trigger cursor-pointer z-50 select-none"
         >
-          Chikya Photography
+          Naik Photography
         </div>
-        
-        <button 
+
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className="hover-trigger z-50 text-white mix-blend-difference flex items-center gap-2 uppercase text-xs tracking-widest font-medium"
         >
           {isOpen ? 'Close' : 'Menu'}
           <div className="relative w-6 h-6">
-             <div className={`absolute inset-0 transition-all duration-300 ${isOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`}>
-                <Menu size={24} strokeWidth={1} />
-             </div>
-             <div className={`absolute inset-0 transition-all duration-300 ${isOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`}>
-                <X size={24} strokeWidth={1} />
-             </div>
+            <div className={`absolute inset-0 transition-all duration-300 ${isOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`}>
+              <Menu size={24} strokeWidth={1} />
+            </div>
+            <div className={`absolute inset-0 transition-all duration-300 ${isOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`}>
+              <X size={24} strokeWidth={1} />
+            </div>
           </div>
         </button>
       </nav>
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
           <ul className="text-center space-y-8">
             {menuItems.map((item, index) => (
               <li key={item.label} className="overflow-hidden">
-                <a 
+                <a
                   href={`#${item.id}`}
                   onClick={(e) => {
                     e.preventDefault();

@@ -24,7 +24,7 @@ const App: React.FC = () => {
     return (
       <div className="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
         <div className="flex flex-col items-center">
-            <div className="font-serif italic text-4xl text-white animate-pulse">Chikya Photography</div>
+            <div className="font-serif italic text-4xl text-white animate-pulse">Naik Photography</div>
             <div className="w-32 h-[1px] bg-white/20 mt-4 overflow-hidden">
                 <div className="w-full h-full bg-white animate-[loading_1.5s_ease-in-out_infinite] transform -translate-x-full"></div>
             </div>
